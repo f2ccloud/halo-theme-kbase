@@ -1,0 +1,197 @@
+.cRecommendedArticles {
+	opacity:1;
+	overflow:hidden;
+	background:#fafafa;
+	border:none;
+	max-width:1248px;
+	margin:auto;
+	padding:0
+}
+.cRecommendedArticles .margin-left-1 {
+	margin-left:1em
+}
+.cRecommendedArticles .no-margin {
+	margin:0!important
+}
+.cRecommendedArticles .no-margin-top {
+	margin-top:0!important
+}
+.cRecommendedArticles .v-align-middle {
+	vertical-align:middle!important
+}
+.cRecommendedArticles .hidden {
+	display:none!important
+}
+.cRecommendedArticles .flex,.cRecommendedArticles .flex-end {
+	display:flex!important
+}
+.cRecommendedArticles .flex-end {
+	flex-direction:row-reverse
+}
+.cRecommendedArticles .align-center {
+	align-self:center!important
+}
+.cRecommendedArticles .align-item-center {
+	align-items:center!important
+}
+.cRecommendedArticles .font-small {
+	font-size:.833em
+}
+.cRecommendedArticles .font-medium {
+	font-size:1em
+}
+.cRecommendedArticles .font-normal {
+	font-size:1.083em
+}
+.cRecommendedArticles .green {
+	color:#62a321!important
+}
+.cRecommendedArticles .coveo-first-loading-animation {
+	display:none
+}
+.cRecommendedArticles .recommendation-header {
+	padding:10px 0 24px 0;
+	background:inherit
+}
+.cRecommendedArticles .recommendation-title {
+	font-size:28px;
+	padding-left:0;
+	color:#565656
+}
+.cRecommendedArticles #search .icon-wrapper {
+	width:34px
+}
+.cRecommendedArticles #search .CoveoVMwareIcon,.cRecommendedArticles #search .CoveoVMwareKBIcon {
+	height:22px
+}
+.cRecommendedArticles #search .CoveoVMwareIcon svg,.cRecommendedArticles #search .CoveoVMwareKBIcon svg {
+	margin:0 auto 8px auto
+}
+.cRecommendedArticles #search .CoveoResultLink.open-in-console {
+	color:#007cbb;
+	line-height:15px;
+	font-size:12px
+}
+.cRecommendedArticles #search {
+	border:none;
+	max-width:1248px;
+	margin:auto;
+	font-family:"MetropolisRegular",sans-serif;
+	font-weight:300
+}
+.cRecommendedArticles #search .coveo-recommendation-body {
+	margin-bottom:40px;
+	background:inherit
+}
+.cRecommendedArticles #search .coveo-recommendation-body .coveo-result-list-container {
+	display:flex;
+	flex-wrap:wrap;
+	flex-direction:row
+}
+.cRecommendedArticles #search .coveo-recommendation-body .coveo-list-layout {
+	height:169px;
+	border:none;
+	margin:12px 0;
+	padding:0
+}
+.cRecommendedArticles #search .coveo-recommendation-body .coveo-list-layout .coveo-result-frame {
+	width:400px;
+	box-shadow:0 3px 0 0 #d7d7d7;
+	overflow:hidden;
+	border-radius:4px;
+	border:solid 1px #d7d7d7;
+	background-color:white;
+	padding:20px 24px
+}
+.cRecommendedArticles #search .coveo-recommendation-body .coveo-list-layout .CoveoFieldValueDetails {
+	font-size:13px;
+	color:#717074;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	overflow:hidden
+}
+.cRecommendedArticles #search .coveo-recommendation-body .coveo-list-layout .CoveoExcerpt {
+	font-size:12px
+}
+.cRecommendedArticles #search .coveo-recommendation-body .coveo-list-layout .link-section .CoveoResultLink {
+	line-height:1.25;
+	font-size:16px;
+	color:#007cbb
+}
+.cRecommendedArticles #search .coveo-recommendation-body .coveo-list-layout .title-section {
+	margin-bottom:6px;
+	height:auto;
+	max-height:43px;
+	overflow:hidden
+}
+.cRecommendedArticles #search .coveo-recommendation-body .coveo-list-layout .title-section .icon-section {
+	float:left;
+	text-align:center;
+	font-size:13px;
+	font-weight:bold;
+	color:#717074
+}
+.cRecommendedArticles #search .coveo-recommendation-body .coveo-list-layout .content-section {
+	font-size:12px;
+	line-height:1.5;
+	color:#565656;
+	overflow:hidden;
+	max-height:54px
+}
+.cRecommendedArticles #search .CoveoSearchInterface .header-wrapper {
+	max-width:1248px!important;
+	border-radius:4px;
+	border:solid 1px #d7d7d7;
+	background-color:white;
+	padding:24px;
+	margin-bottom:50px!important
+}
+.cRecommendedArticles #search .CoveoSearchInterface .header-wrapper .searchbox-title {
+	font-size:32px;
+	padding-bottom:24px
+}
+.cRecommendedArticles #search .CoveoResultList.coveo-during-initialization.coveo-with-placeholder {
+	display:none
+}
+@media (max-width:824px) {
+	.cRecommendedArticles {
+	padding:0 12px
+}
+.cRecommendedArticles .recommendation-title {
+	height:22px;
+	font-size:18px;
+	text-align:center
+}
+.cRecommendedArticles #search .coveo-recommendation-body .coveo-list-layout {
+	flex:1 100%;
+	height:auto;
+	border:0;
+	margin:6px 0;
+	padding:0
+}
+.cRecommendedArticles #search .coveo-recommendation-body .coveo-list-layout .coveo-result-frame {
+	padding:12px;
+	width:100%;
+	height:auto
+}
+.cRecommendedArticles #search .coveo-recommendation-body .coveo-list-layout .title-section .CoveoVMwareIcon {
+	display:none
+}
+}@media (min-width:825px) and (max-width:1248px) {
+	.cRecommendedArticles .recommendation-title {
+	text-align:center
+}
+.cRecommendedArticles #search .coveo-recommendation-body .coveo-list-layout:nth-child(odd) {
+	margin-right:24px
+}
+.cRecommendedArticles #search .coveo-recommendation-body .coveo-result-list-container {
+	justify-content:center
+}
+}@media (min-width:1249px) {
+	.cRecommendedArticles #search .coveo-recommendation-body .coveo-list-layout {
+	margin-right:24px
+}
+.cRecommendedArticles #search .coveo-recommendation-body .coveo-list-layout:nth-child(3n) {
+	margin-right:0
+}
+}

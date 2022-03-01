@@ -1,0 +1,242 @@
+# 配置详情请参考：https://docs.halo.run/zh/developer-guide/theme/config-files
+genernal:
+  label: 基本设置
+  items:
+    access_key:
+      name: access_key
+      label: AccessKey <必填>
+      type: text
+      default: "fit2cloud"
+      placeholder: "请务必与后台中的Key一致"
+      description: "Access Key 用于页面中 Content API 的校验，不填会导致接口报错，默认为 fit2cloud，但可以自己定义，请不要填写中文或特殊字符（请务必同时配置此处的 Access Key 和后台管理中的 Access Key，并保持一致）"
+    index_notice:
+      name: index_notice
+      label: 首页公告
+      type: textarea
+      default: '欢迎来到我的博客'
+    favicon:
+      name: favicon
+      label: 网站图标
+      type: attachment
+      default: ""
+      description: "设置网站图标，不填不展示"
+    logo:
+      name: logo
+      label: 网站 logo
+      type: attachment
+      default: ""
+      description: "设置网站 logo图，不填不展示"
+    icp:
+      name: icp
+      label: ICP 备案号
+      type: text
+      default: ""
+      placeholder: "请填写 ICP 备案号信息"
+      description: "ICP 备案信息将展示在页脚中，不填不展示（示例：浙ICP备14038283号）"
+    police:
+      name: police
+      label: 公网安备号
+      type: text
+      default: ""
+      placeholder: "请填写公网安备号信息"
+      description: "公网安备信息将展示在页脚中，不填不展示，也可在 “页脚” 一栏中单独关闭（示例：浙公网安备42011102001234号）"
+    copyright:
+      name: copyright
+      label: 版权
+      type: text
+      default: ""
+      placeholder: "请填写版权信息"
+      description: "版权将展示在页脚中，不填不展示，也可在 “页脚” 一栏中单独关闭（示例：2014-2022 版权所有©杭州飞致云信息科技有限公司）"
+    tos:
+      name: tos
+      label: 网站使用条款
+      type: text
+      default: ""
+      placeholder: "请填写网站使用条款信息"
+      description: "网站使用条款将展示在页脚中，不填不展示，也可在 “页脚” 一栏中单独关闭（示例：https://www.fit2cloud.com/legal/tos.html）"
+    privacy_policy:
+      name: privacy_policy
+      label: 隐私权政策声明
+      type: text
+      default: ""
+      placeholder: "请填写隐私权政策声明信息"
+      description: "隐私权政策声明将展示在页脚中，不填不展示，也可在 “页脚” 一栏中单独关闭（示例：https://www.fit2cloud.com/legal/privacy-policy.html）"
+    licenses:
+      name: licenses
+      label: 社区软件许可协议
+      type: text
+      default: ""
+      placeholder: "请填写社区软件许可协议"
+      description: "社区软件许可协议将展示在页脚中，不填不展示，也可在 “页脚” 一栏中单独关闭（示例：https://www.fit2cloud.com/legal/licenses.html）"
+
+# 主题
+theme:
+  label: 主题
+  items:
+    index_source:
+      name: index_source
+      label: 首页页面
+      type: select
+      data-type: text
+      default: index
+      description: "设置首页页面具体来自哪里"
+      options:
+        - value: index
+          label: 默认首页
+        - value: archives
+          label: 文章页
+        # - value: category
+        #   label: 分类页
+        # - value: tag
+        #   label: 标签页
+        # - value: search
+        #   label: 搜索页
+
+# 页眉
+header:
+  label: 页眉
+  items:
+    enable_header:
+      name: enable_header
+      label: 启用页眉
+      type: switch
+      data-type: bool
+      default: true
+      options:
+        - value: true
+          label: 是
+        - value: false
+          label: 否
+    header_banner:
+      name: header_banner
+      label: 页眉 banner
+      type: attachment
+      default: ""
+      description: "设置页眉 banner的背景图，不填不展示"
+
+      
+# 页脚
+footer:
+  label: 页脚
+  items:
+    enable_footer:
+      name: enable_footer
+      label: 启用页脚
+      type: switch
+      data-type: bool
+      default: true
+      options:
+        - value: true
+          label: 是
+        - value: false
+          label: 否
+    footer_source:
+      name: footer_source
+      label: 页脚来源
+      type: select
+      data-type: text
+      default: theme
+      description: "设置页脚内容具体来自哪里，默认使用主题页脚，也可同时使用主题和后台配置的页脚。如果使用后台自定义页脚，建议复制主题的页脚 html 结构进行修改（/template/common/footer.ftl），然后粘贴到后台的页脚配置内（主题无法保证自定义页脚的样式及适配，请视具体情况设置，必要的时候请自行修改样式）"
+      options:
+        - value: theme
+          label: "主题页脚"
+        - value: backend
+          label: "后台页脚"
+        - value: both
+          label: "主题页脚 + 后台页脚"
+    footer_title:
+      name: footer_title
+      label: "页脚标题"
+      type: text
+      default: ""
+      placeholder: "请填写页脚标题"
+      description: "页脚标题信息将展示在页脚中，不填不展示（示例：FIT2CLOUD 飞致云）"
+    title_content:
+      name: title_content
+      label: "标题内容"
+      type: textarea
+      default: ""
+      placeholder: "请填写标题内容"
+      description: "标题内容信息将展示在页脚中，不填不展示（示例：我们秉持“软件用起来才有价值，才有改进的机会”的核心价值观， 向企业级用户交付被广泛验证、可信赖的通用工具软件。）"
+    contact_us:
+      name: contact_us
+      label: 联系我们
+      type: textarea
+      default: ""
+      placeholder: "请填写联系我们内容"
+      description: "联系我们内容信息将展示在页脚中，不填不展示（示例：support@fit2cloud.com）"
+    follow_us:
+      name: follow_us
+      label: 关注我们
+      type: attachment
+      default: ""
+      description: "设置关注我们的背景图，不填不展示"
+    enable_icp:
+      name: enable_icp
+      label: 展示 ICP
+      type: switch
+      data-type: bool
+      default: true
+      options:
+        - value: true
+          label: 是
+        - value: false
+          label: 否
+    enable_police:
+      name: enable_police
+      label: 展示公网安备
+      type: switch
+      data-type: bool
+      default: true
+      options:
+        - value: true
+          label: 是
+        - value: false
+          label: 否
+    enable_tos:
+      name: enable_tos
+      label: 展示网站使用条款
+      type: switch
+      data-type: bool
+      default: true
+      description: ""
+      options:
+        - value: true
+          label: 是
+        - value: false
+          label: 否
+    enable_copyright:
+      name: enable_copyright
+      label: 展示版权
+      type: switch
+      data-type: bool
+      default: true
+      options:
+        - value: true
+          label: 是
+        - value: false
+          label: 否
+    enable_privacy:
+      name: enable_privacy
+      label: 展示隐私条款
+      type: switch
+      data-type: bool
+      default: true
+      options:
+        - value: true
+          label: 是
+        - value: false
+          label: 否
+    enable_licenses:
+      name: enable_licenses
+      label: 展示社区许可协议
+      type: switch
+      data-type: bool
+      default: true
+      description: ""
+      options:
+        - value: true
+          label: 是
+        - value: false
+          label: 否
+    
