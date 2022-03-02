@@ -18,7 +18,7 @@
 	<article data-region-name="content" id="content" class="">
     <div id="contentContainer" class="slds-grid slds-wrap slds-medium-nowrap slds-large-nowrap">
 			<div id="contentMain" class="markdown-body slds-col--padded slds-size--12-of-12 slds-medium-size--8-of-12 slds-large-size--8-of-12 comm-layout-column">
-				<div id="articleContent">
+				<div class="articleContent">
 					<div style="padding-bottom: 10px; padding-top: 10px" id="divLogo" class="visible-print">
                         <div class="slds-grid slds-wrap">
                             <div class="slds-col slds-size_1-of-4">
