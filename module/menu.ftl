@@ -2,7 +2,7 @@
 	<div class="header">
 		<div class="header-wrapper">
 			<div class="header-nav app-nav">
-				<div class="container nav">
+				<div class="containers nav">
 					<#if settings.logo?? && settings.logo?trim!=''>
 						<div class="app-logo">
 							<img src="${settings.logo!}" height="20" width="295" alt="">

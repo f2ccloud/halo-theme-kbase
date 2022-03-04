@@ -3,7 +3,7 @@
     <footer>
         <#if settings.footer_source=='both' || settings.footer_source=='theme'>
             <div class="app-footer">
-                <div class="footer-top container">
+                <div class="footer-top containers">
                     <div class="el-row" style="margin-left: -30px; margin-right: -30px;">
                         <div class="el-col el-col-10" style="padding-left: 30px; padding-right: 30px;">
                             <#if settings.footer_title?? && settings.footer_title?trim!=''>
@@ -40,16 +40,16 @@
                     </div>
                 </div>
                 <#if settings.enable_icp && settings.icp?? && settings.icp?trim!=''>
-                    <p>
+                    <p class="footer-p">
                         ${settings.icp!}
                     </p>
                 </#if>
                 <#if settings.enable_copyright && settings.copyright?? && settings.copyright?trim!=''>
-                    <p>
+                    <p class="footer-p">
                         ${settings.copyright!}
                     </p>
                 </#if>
-                <p>
+                <p class="footer-p">
                     <#if settings.enable_tos && settings.tos?? && settings.tos?trim!=''>
                         <a href="${settings.tos!}"
                         class="text-foot title-p">
