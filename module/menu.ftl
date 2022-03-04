@@ -35,6 +35,18 @@
 		<div class="page-banner" style="background:url(${settings.header_banner!}) #021c3a bottom no-repeat;">
 			<div class="bg-overlay">
 			</div>
+			<div class="pro-header">
+				<div class="container" style="position: relative;">
+					<div class="pro-title" style="margin:0 auto; text-align:center">
+						<h1 class="title-h1">
+							${settings.index_notice!}
+						</h1>
+						<div class="el-breadcrumb app-breadcrumb">
+							
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </@menuTag>

@@ -15427,7 +15427,9 @@ ul {
 }
 
 .page-banner .pro-title {
-    height: 120px
+    height: 120px;
+    margin: 0 auto;
+    text-align: center
 }
 
 .page-banner .pro-title .title-h1 {
@@ -15553,7 +15555,7 @@ ul {
     margin: 14px auto
 }
 
-.fooder-p {
+.footer-p {
     display: block;
     margin-block-start: 1em;
     margin-block-end: 1em;

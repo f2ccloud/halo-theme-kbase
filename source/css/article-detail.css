@@ -407,23 +407,6 @@
 
 /* End */
 
-@media only screen and (max-device-width:768px) {
-    #contentSidebar {
-        width: 100%;
-    }
-    #contentSidebar .articleInfo {
-        width: 100%;
-        /* margin-left:0;
-	*/
-    }
-    #contentSidebar .articleInfo .articleInternalView hr {
-        width: 95%;
-    }
-}
-
-
-/* Meta CSS End */
-
 
 /* SKYLINE CSS */
 
@@ -1217,7 +1200,7 @@
     min-width: 30%;
     max-width: 70%;
     margin: 0 auto;
-    padding: 45px;
+    padding: 0px 45px 45px 100px;
 }
 
 @media (max-width: 767px) {

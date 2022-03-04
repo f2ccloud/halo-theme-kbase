@@ -121,7 +121,7 @@
 					</div>
 				</div>
 			</div>
-			<div id="contentSidebar" class="slds-col--padded slds-size--12-of-12 slds-medium-size--4-of-12 slds-large-size--4-of-12 comm-layout-column">
+			<div id="contentSidebar" style="padding-right: 100px;padding-top: 45px;" class="slds-col--padded slds-size--12-of-12 slds-medium-size--4-of-12 slds-large-size--4-of-12 comm-layout-column">
 
 				<div id="sidebarSection1">
 					<div class="relatedResources cAdditionalResources">
