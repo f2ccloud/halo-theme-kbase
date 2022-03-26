@@ -58,7 +58,7 @@
                                             <span class="magic-box-ghost-text">
                                             </span>
                                         </div>
-                                        <input type="text" id="keyword" name="keyword" aria-autocomplete="list" placeholder="搜索关键字、产品或问题..">
+                                        <input type="text" id="keyword" name="keyword" value="${keyword!}" aria-autocomplete="list" placeholder="搜索关键字、产品或问题..">
                                         <div class="magic-box-clear coveo-accessible-button coveo-accessible-button-pressed" role="button" aria-label="Clear"
                                         tabindex="-1" aria-hidden="true">
                                             <div class="magic-box-icon">
@@ -90,7 +90,6 @@
                             </div>
                         </div>
                     </div>
-                    </form>
                 </div>
             </div>
         </div>
