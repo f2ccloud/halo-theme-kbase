@@ -22,8 +22,9 @@
 
         <#nested >
     </div>
-    <#include "footer.ftl">
+        <#include "footer.ftl">
     <script type="text/javascript" charset="utf-8" src="${theme_base!}/source/js/fit2cloud.js"></script>
+        <#include "back-top.ftl">
     </body>
     </html>
 </#macro>

@@ -1,6 +1,6 @@
 function formSubmit() {
     var keyword = $("#keyword").val();
-    let keysArr = JSON.parse(localStorage.getItem('keys')) == null ? [] : JSON.parse(localStorage.getItem('keys'));
+    let keysArr = JSON.parse(sessionStorage.getItem('keys')) == null ? [] : JSON.parse(sessionStorage.getItem('keys'));
     if (keyword && keysArr.length < 3 && keysArr.indexOf(keyword) === -1) {
         keysArr.push(keyword)
     }
@@ -9,16 +9,16 @@ function formSubmit() {
         keysArr.push(keyword)
     }
     if (keysArr) {
-        localStorage.setItem('keys', JSON.stringify(keysArr));
+        sessionStorage.setItem('keys', JSON.stringify(keysArr));
     }
 
-    localStorage.setItem("keyword", keyword);
+    sessionStorage.setItem("keyword", keyword);
     document.getElementById("myForm").submit()
 }
 
 function initKeyword() {
-    var keyword = localStorage.getItem("keyword");
-    let keysArr = JSON.parse(localStorage.getItem('keys'));
+    var keyword = sessionStorage.getItem("keyword");
+    let keysArr = JSON.parse(sessionStorage.getItem('keys'));
     // if (keyword) {
     //     $("#keyword").val(keyword);
     // }
@@ -50,3 +50,55 @@ function initKeyword() {
     }
 }
 initKeyword();
+
+function scrolldown() {
+    const $el = $("#backtop");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        $el.css('display', 'block')
+    } else {
+        $el.css('display', 'none')
+    }
+}
+window.onscroll = function() { scrolldown() };
+
+function back2Top() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+
+function postToc() {
+    /**
+     * 初始化目录
+     */
+    var headerEl = 'h1,h2,h3,h4,h5,h6';
+    tocbot.init({
+        tocSelector: '#toc',
+        contentSelector: '.markdown-body',
+        headingSelector: headerEl
+    });
+}
+
+postToc();
+
+$(window).scroll(function() {
+    //获取滚动条的高度
+    var scrollTop = $(this).scrollTop();
+    //获取一个屏幕的高度
+    var windowHeight = document.body.clientHeight;
+    //当滚动条滚动到一边的最底部，把需要的div滚动到底部就固定div不让移动了
+    if (scrollTop > $('#rightdiv').height() - windowHeight && scrollTop < ($('#contentMain').height() - 250)) {
+        $("#rightdiv").css("position", "fixed"); //固定div让其不随着滚动条的滚动而滚动
+        if (scrollTop > 420) {
+            $("#rightdiv").css("top", "1px");
+        }
+        if (scrollTop == 420) {
+            $("#rightdiv").css("top", "420px");
+        }
+        if (scrollTop < 420) {
+            $("#rightdiv").css("top", 430 - scrollTop + "px");
+        }
+        $("#rightdiv").css("bottom", "10px");
+    } else {
+        $("#rightdiv").css("position", "static"); //恢复div可以跟随滚动条滚动
+    }
+});

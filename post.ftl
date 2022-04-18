@@ -1,6 +1,7 @@
 <#include "module/macro.ftl">
 <@layout title="${post.title!} - ${blog_title!}">
 <#include "module/common-search.ftl">
+
 <div class="content">
 	<div id="spinner" class="slds-hide">
 		<lightning-spinner class="slds-spinner_container">
@@ -121,8 +122,54 @@
 					</div>
 				</div>
 			</div>
-			<div id="contentSidebar" style="padding-right: 100px;padding-top: 45px;" class="slds-col--padded slds-size--12-of-12 slds-medium-size--4-of-12 slds-large-size--4-of-12 comm-layout-column">
+			<div id="contentSidebar"  class="slds-col--padded slds-size--12-of-12 slds-medium-size--4-of-12 slds-large-size--4-of-12 comm-layout-column">
 
+                <div id="rightdiv" style="padding-right: 100px;padding-top: 45px;">
+                <div id="sidebarSection2">
+					<div class="relatedResources cAdditionalResources">
+						<div class="section_header slds-p-top_large slds-p-bottom_xx-small">
+							文章目录
+						</div>
+						<div class="related-resources-wrapper">
+                            <aside id="toc" class="toc"></aside>
+							<#--  <div class="CoveoV2SearchUI">
+							</div>
+							<div  class="CoveoV2SearchUI" data-aura-class="CoveoV2SearchUI">
+                                <div id="search" class="CoveoSearchInterface white CoveoUserProfileModel Coveostate CoveoComponentState CoveoComponentOptions CoveoQueryController CoveoHistoryController coveo-after-initialization CoveoDebug"
+                                data-enable-history="true" data-design="new" style="display: block;">
+                                <div class="CoveoAnalytics">
+                                </div>
+                                <div class="CoveoCommunityStateManager">
+                                </div>
+                                <div class="CoveoRecommendationPadding" data-recommendation="additionalResources">
+                                </div>
+                                <div class="coveo-results-column">
+                                    <div class="CoveoErrorReport" aria-hidden="true" style="display: none;">
+                                    <div class="coveo-error-report-container">
+                                        <div class="coveo-error-report-title">
+                                        </div>
+                                        <div class="coveo-error-report-message">
+                                        </div>
+                                    </div>
+                                    </div>
+                                    <div class="CoveoTriggers">
+                                    </div>
+                                    <div class="CoveoResultList" data-layout="list" data-wait-animation="none"
+                                    data-auto-select-fields-to-include="false">
+                                    <div class="coveo-result-list-container coveo-list-layout-container" >
+                                        <aside id="toc" class="toc"></aside>
+                                    </div>
+                                    </div>
+                                </div>
+                                <div aria-live="polite" class="coveo-visible-to-screen-reader-only">
+                                </div>
+                                </div> 
+                            </div> -->
+
+							
+						</div>
+					</div>
+				</div>
 				<div id="sidebarSection1">
 					<div class="relatedResources cAdditionalResources">
 						<div class="section_header slds-p-top_large slds-p-bottom_xx-small">
@@ -224,7 +271,7 @@
 </div>
 <script>
 function loadOtherArticle() {
-    var keyword = localStorage.getItem("keyword");
+    var keyword = sessionStorage.getItem("keyword");
     var cate = "${(post.categories[0].id)!''}";
     var tag = "${(post.tags[0].slug)!''}";
 
