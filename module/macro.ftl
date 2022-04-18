@@ -13,6 +13,8 @@
 
         <link rel="stylesheet" href="${theme_base!}/dist/style.css"/>
         <link rel="icon" href="${settings.favicon!}"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
         <title>${title}</title>
     </head>
     <body class="null comm-page-home">
