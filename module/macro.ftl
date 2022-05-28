@@ -16,6 +16,53 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
         <title>${title}</title>
+
+        <#if is_post?? || is_sheet??>
+            <link href="${theme_base!}/source/libs/highlight.js/styles/${settings.highlight_style!'default.min.css'}"
+                  rel="stylesheet">
+            <script src="${theme_base!}/source/libs/highlight.js/highlight.min.js"></script>
+
+            <script>
+                (async function () {
+                    const extraLanguages = "${settings.highlight_extra_languages!''}".split(",").filter(x => x);
+
+                    for (let i = 0; i < extraLanguages.length; i++) {
+                        const lang = extraLanguages[i];
+                        if (lang) {
+                            await loadScript("${theme_base!}/source/libs/highlight.js/languages/" + lang + ".min.js");
+                        }
+                    }
+
+                    console.log("Extra languages: ", extraLanguages);
+
+                    document.querySelectorAll('pre code').forEach((el) => {
+                        hljs.highlightElement(el);
+                    });
+                    console.log("Loaded languages: ", hljs.listLanguages())
+                })()
+
+                function loadScript(url) {
+                    return new Promise(function (resolve, reject) {
+                        const script = document.createElement('script');
+                        script.type = "text/javascript";
+                        script.src = url;
+                        script.onload = resolve;
+                        script.onerror = reject;
+                        document.head.appendChild(script);
+                    });
+                }
+
+            </script>
+
+            <style>
+                .markdown-body pre {
+                    padding: 0 !important;
+                }
+                .markdown-body pre code {
+                    border: 1px solid #fbf6f6;
+                }
+            </style>
+        </#if>
     </head>
     <body class="null comm-page-home">
     <div id="page-container" class="cKM_PortalTheme">
