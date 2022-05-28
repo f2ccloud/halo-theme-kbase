@@ -114,7 +114,7 @@
 								</span>
 								正文  -->
 							</div>
-							<div class="content">
+							<div id="article-content" class="content">
 								${post.formatContent!}
 							</div>
 						</div>

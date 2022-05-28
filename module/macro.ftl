@@ -21,6 +21,8 @@
             <link href="${theme_base!}/source/libs/highlight.js/styles/${settings.highlight_style!'default.min.css'}"
                   rel="stylesheet">
             <script src="${theme_base!}/source/libs/highlight.js/highlight.min.js"></script>
+            <link href="${theme_base!}/source/libs/lightgallery.js/css/lightgallery.min.css" rel="stylesheet">
+            <script src="${theme_base!}/source/libs/lightgallery.js/js/lightgallery.min.js"></script>
 
             <script>
                 (async function () {
@@ -58,6 +60,7 @@
                 .markdown-body pre {
                     padding: 0 !important;
                 }
+
                 .markdown-body pre code {
                     border: 1px solid #fbf6f6;
                 }
@@ -71,9 +74,24 @@
 
         <#nested >
     </div>
-        <#include "footer.ftl">
+    <#include "footer.ftl">
     <script type="text/javascript" charset="utf-8" src="${theme_base!}/source/js/fit2cloud.js"></script>
-        <#include "back-top.ftl">
+    <#include "back-top.ftl">
+
+    <#if is_post?? || is_sheet??>
+        <script type="text/javascript">
+            const imageNodes = document.querySelectorAll('#article-content img');
+            imageNodes.forEach(function (node) {
+                if (node) {
+                    node.dataset.src = node.src;
+                }
+            })
+
+            lightGallery(document.getElementById('article-content'), {
+                selector: 'img',
+            })
+        </script>
+    </#if>
     </body>
     </html>
 </#macro>
