@@ -1,6 +1,7 @@
 <#include "module/macro.ftl">
 <@layout title="${post.title!} - ${blog_title!}">
 <#include "module/common-search.ftl">
+<#include "module/comment.ftl">
 
 <div class="content">
 	<div id="spinner" class="slds-hide">
@@ -121,6 +122,7 @@
 					
 					</div>
 				</div>
+                <@comment post=post type="post" />
 			</div>
 			<div id="contentSidebar"  class="slds-col--padded slds-size--12-of-12 slds-medium-size--4-of-12 slds-large-size--4-of-12 comm-layout-column">
 
@@ -349,8 +351,6 @@ function getArticle(url, type, data){
 }
 loadOtherArticle();
 </script>
-<#include "module/comment.ftl">
-<@comment post=post type="post" />
 </@layout>
 
 
